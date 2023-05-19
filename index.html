@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Forside | eaaa.shop </title>
+
+    <!-- Tab ikon -->
+    <link rel="icon" type="image/x-icon" href="img/logotab.png" class="tab_ikon">
+
+    <!-- Fonte og ikoner (findes på google: google material icon) -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- ikoner  -->
+    <script src="https://kit.fontawesome.com/66a5a04b45.js" crossorigin="anonymous"></script>
+</head>
+
+
+<!---- BODY-->
+
+<body>
+
+
+    <!---- BURGERMENU - https://alvarotrigo.com/blog/hamburger-menu-css/ (nr. 11) -->
+    <header>
+        <!-------------------------------Burger streger-------------------------->
+
+        <nav class="burgermenu">
+            <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
+            <label class="m-menu__toggle" for="menu">
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="butt"
+                    stroke-linejoin="arcs">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+            <label class="m-menu__overlay" for="menu"></label>
+
+            <!----------------------------------google ikoner i navbar--------------------------->
+            <a href="index.html" class="logo"><img src="img/logo.jpg" alt="logo til forsiden" class="logo"></a>
+
+            <div class="nav_ikoner">
+                <i class="material-icons" id="ikon_search">search</i>
+                <i class="material-icons" id="ikon_shoppingbag">shopping_bag</i>
+            </div>
+
+            <!------------------------------Kryds i menu----------------------------->
+            <div class="m-menu">
+                <div class="m-menu__header">
+                    <label class="m-menu__toggle" for="menu">
+                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke-width="2"
+                            stroke-linecap="butt" stroke-linejoin="arcs">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </label>
+                    <span></span>
+                </div>
+                <!-----------------------------Tilbage pil-------------------------------->
+
+
+                <!------------------------------SEKTION 1----------------------------------->
+                <ul>
+                    <li>
+                        <label class="a-label__chevron" for="item-1">TILBUD</label>
+                        <input type="checkbox" id="item-1" name="item-1" class="m-menu__checkbox">
+                        <div class="m-menu">
+                            <div class="m-menu__header">
+                                <label class="m-menu__toggle" for="item-1">
+                                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                        stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                        <path d="M19 12H6M12 5l-7 7 7 7" />
+                                    </svg>
+                                </label>
+                                <span>Tilbud</span>
+                            </div>
+                            <ul>
+                                <li><label>Discount offer</label></li>
+                                <li>
+                                    <label><a href="#" id="a_menu">Friday offer</a></label>
+                                </li>
+
+
+                                <div class="m-menu">
+                                    <div class="m-menu__header"></div>
+                                </div>
+
+                    </li>
+                </ul>
+
+
+
+
+                <!-----------------------------SEKTION 2---------------------------------->
+
+                <li>
+                    <label class="a-label__chevron" for="item-2">MAD</label>
+                    <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
+                    <div class="m-menu">
+                        <div class="m-menu__header">
+                            <label class="m-menu__toggle" for="item-2">
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                    stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                </svg>
+                            </label>
+                            <span>Mad</span>
+                        </div>
+                        <ul>
+                            <li><label>Dagens ret</label></li>
+                            <li><label>Bruger</label></li>
+                            <li><label>Pasta</label></li>
+                            <li><label>Pita</label></li>
+                            <li><label>Pizza</label></li>
+                            <li><label>Salat</label></li>
+                            <li><label>Sandwich</label></li>
+                            <li><label>Wraps</label></li>
+                            <div class="m-menu">
+                                <div class="m-menu__header"></div>
+                            </div>
+                        </ul>
+
+                    </div>
+                </li>
+
+
+
+
+                <!-------------------------------------------- SEKTION 3------------------------------------->
+                <li>
+                    <label class="a-label__chevron" for="item-3">SNACKS</label>
+                    <input type="checkbox" id="item-3" name="item-3" class="m-menu__checkbox">
+                    <div class="m-menu">
+                        <div class="m-menu__header">
+                            <label class="m-menu__toggle" for="item-3">
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                    stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                </svg>
+                            </label>
+                            <span>Snacks</span>
+                        </div>
+                        <ul>
+                            <li><label>Bagværk</label></li>
+                            <li><label>Bars</label></li>
+                            <li><label>Frugt</label></li>
+                            <li><label>Pølsehorn</label></li>
+                            <li><label>Slik</label></li>
+                            <li><label>Tyggegummi</label></li>
+
+                            <div class="m-menu">
+                                <div class="m-menu__header"></div>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+
+
+
+                <!----------------------------------------------SEKTION 4---------------------------------------->
+                <li>
+                    <label class="a-label__chevron" for="item-4">DRIKKEVARER</label>
+                    <input type="checkbox" id="item-4" name="item-4" class="m-menu__checkbox">
+                    <div class="m-menu">
+                        <div class="m-menu__header">
+                            <label class="m-menu__toggle" for="item-4">
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                    stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                </svg>
+                            </label>
+                            <span>Drikkevarer</span>
+                        </div>
+                        <ul>
+                            <li><label>Energidrik</label></li>
+                            <li><label>Juice</label></li>
+                            <li><label>Sodavand</label></li>
+                            <li><label>Vand</label></li>
+                            <li><label>Vitamin Well</label></li>
+
+                            <div class="m-menu">
+                                <div class="m-menu__header"></div>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+
+
+
+                <!---------------------------------------------SEKTION 5------------------------------------------->
+                <li>
+                    <label class="a-label__chevron" for="item-5">AFHENTNING</label>
+                    <input type="checkbox" id="item-5" name="item-5" class="m-menu__checkbox">
+                    <div class="m-menu">
+                        <div class="m-menu__header">
+                            <label class="m-menu__toggle" for="item-5">
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                    stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                </svg>
+                            </label>
+                            <span> Afhentning</span>
+                        </div>
+                        <ul>
+                            <li><label>Hasselager Alle 8</label></li>
+                            <li><label>Ringvej Syd 104</label></li>
+                            <li><label>Sønderhøj 1</label></li>
+                            <li><label>Sønderhøj 7G</label></li>
+                            <li><label>Sønderhøj 28</label></li>
+                            <li><label>Sønderhøj 30</label></li>
+                            <li><label>Vejlby centervej 50</label></li>
+                            <li><label>Viemosevej 50</label></li>
+                            <div class="m-menu">
+                                <div class="m-menu__header"></div>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
+
+
+
+
+            </div>
+            <!---DROPDOWN MENU (https://www.w3schools.com/howto/howto_css_dropdown.asp)-->
+
+            <nav class="menu_bar">
+
+                <!-- Menu items -->
+                <div class="menu_items">
+
+                    <div class="dropdown">
+                        <form action="#" class="menu_item"><button class="dropbutton">TILBUD</button></form>
+                        <div class="drop_punkter">
+                            <a href="#">Discount offer</a>
+                            <a href="#">Friday offer</a>
+
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <form action="#" class="menu_item"><button class="dropbutton">MAD</button></form>
+                        <div class="drop_punkter">
+                            <a href="#">Dagens ret</a>
+                            <a href="#">Bruger</a>
+                            <a href="#">Pasta</a>
+                            <a href="#">Pita</a>
+                            <a href="#">Pizza</a>
+                            <a href="#">Salat</a>
+                            <a href="#">Sandwich</a>
+                            <a href="#">Wraps</a>
+
+                        </div>
+                    </div>
+
+                    <div class="dropdown dropdown_ekstra_bue">
+                        <form action="#" class="menu_item"><button class="dropbutton">SNACKS</button></form>
+                        <div class="drop_punkter">
+                            <a href="#">Bagværk</a>
+                            <a href="#">Bars</a>
+                            <a href="#">Frugt</a>
+                            <a href="#">Pølsehorn</a>
+                            <a href="#">Slik</a>
+                            <a href="#">Tyggegummi</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <form action="#" class="menu_item"><button class="dropbutton">DRIKKEVARER</button></form>
+                        <div class="drop_punkter">
+                            <a href="#">Energidrik</a>
+                            <a href="#">Juice</a>
+                            <a href="#">Sodavand</a>
+                            <a href="#">Vand</a>
+                            <a href="#">Vitamin Well</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <form action="#" class="menu_item dropdown_ekstra_bue"><button
+                                class="dropbutton">AFHENTNING</button></form>
+                        <div class="drop_punkter">
+                            <a href="#">Hasselager Alle 8</a>
+                            <a href="#">Ringvej Syd 104</a>
+                            <a href="#">Sønderhøj 1</a>
+                            <a href="#">Sønderhøj 7G</a>
+                            <a href="#">Sønderhøj 28</a>
+                            <a href="#">Sønderhøj 30</a>
+                            <a href="#">Vejlby centervej 50</a>
+                            <a href="#">Viemosevej 50</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+
+
+
+
+
+    </header>
+
+
+
+
+
+
+    <!--FORSIDEBILLEDE-->
+    <div class="forside_cover">
+        <img src="img/forsideBaggrund.png" alt="forside billede" class="forside_img">
+        <div class="forside_txt">
+            <h1 class="forside_overskrift">EAAA'T</h1>
+            <h6 class="eaaa_txt">Erhvervsakademiet Aarhus </h6>
+            <form action="#"> <button
+                    class="button-21 button-211 " role="button">Bestil din frokost </button> </form>
+        </div>
+    </div>
+
+    <!--CONTEN--->
+
+    <section class="forside_section" id="forside_top_section">
+        <h2 class="forside_section_header" id="forside_section_top_header"> Bestil - step by step </h2>
+        <section class="m_step_section">
+            <div class="mv_row">
+                <a href="produkt.html" class="mv_link">
+                    <img src="img/buyfood.png" alt="tallerken" class="f_contentimg bestil_m_img">
+                    <p class="mv_navn"> Vælg din frokost på eaaat.dk</h3>
+                </a>
+                
+            </div>
+
+            <div class="mv_row">
+                <a href="produkt.html" class="mv_link">
+                    <img src="img/mobilepay_logo.png" alt="mobilepay" class="f_contentimg bestil_m_img">
+                    <p class="mv_navn"> Betal med Mobilepay eller kort</h3>
+                </a>
+               
+            </div>
+
+            <div class="mv_row">
+                <a href="produkt.html" class="mv_link">
+                    <img src="img/takeaway.png" alt="takeaway" class="f_contentimg bestil_m_img">
+                    <p class="mv_navn"> Afhent i din nærmest kantine</h3>
+              
+                </a>
+               
+            </div>
+            <div class="mv_row">
+                <a href="produkt.html" class="mv_link">
+                    <img src="img/enjoy.png" alt="nyd din" class="f_contentimg bestil_m_img">
+                    <p class="mv_navn"> Nyd din frokost i kantinen</h3>
+                        
+                </a>
+               
+            </div>
+        </section>
+    </section>
+
+
+    
+
+
+    <!--FOOTER--->
+    <footer>
+
+        <!-- Kontakt -->
+        <div class="footer_card">
+            <h4 class="footer_card_header">Kontakt</h4>
+            <a href="#" class="footer_link">eaaat@eaaa.dk</a>
+            <a href="#" class="footer_link">+45 12 34 56 78</a>
+            <a href="#" class="footer_link">Sønderhøj 1</a>
+            <a href="#" class="footer_link"> 8260 Viby</a>
+        </div>
+
+        <!-- bottom nav -->
+        <div class="footer_card">
+            <a href="#" class="footer_link">TILBUD</a>
+            <a href="#" class="footer_link">MAD</a>
+            <a href="#" class="footer_link">SNACKS</a>
+            <a href="#" class="footer_link">DRIKKEVARER</a>
+            <a href="#" class="footer_link">AFHENTNING</a>
+
+
+        </div>
+
+        <!-- SOME -->
+        <div class="footer_card">
+            <div class="footer_ikons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <a href="https://www.facebook.com/gladforvin.dk" class="footer_link"><img src="img/facebook.png"
+                    alt="Facebook logo" class="some_img"></a>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
