@@ -1,0 +1,647 @@
+/* Basic reset */
+:after:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*=============================================================================================
+==========================================   MOBIL   ==========================================
+=============================================================================================*/
+
+
+/*-----------------------------------------------------------------------
+FARVER - hentes med: var(--navn)
+-----------------------------------------------------------------------*/
+:root {
+    --blaa: #9cb2aa;
+    --gul: #FFD200;
+    --graa: #cfc6be;
+    --beige: #ede4c8;
+    --hvid: #f0f2f3;
+    --sort: #36312D;
+}
+
+.tab_ikon {
+    width: 100%;
+}
+
+/*---BODY--*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: var(--hvid);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Neucha', cursive;
+}
+
+
+/*---BURGERMENU - https://alvarotrigo.com/blog/hamburger-menu-css/ (nr. 11)--*/
+
+
+nav {
+    background-color: var(--sort);
+    height: 6rem;
+    padding: 0 16px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+
+    /* fade in checked menu */
+}
+
+nav .m-menu__checkbox {
+    display: none;
+}
+
+nav label.m-menu__toggle {
+    cursor: pointer;
+}
+
+nav .m-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 450px;
+    width: calc(100vw - 30px);
+    height: 100%;
+    -moz-transform: translate3d(-450px, 0, 0);
+    -o-transform: translate3d(-450px, 0, 0);
+    -ms-transform: translate3d(-450px, 0, 0);
+    -webkit-transform: translate3d(-450px, 0, 0);
+    transform: translate3d(-450px, 0, 0);
+    -moz-transition: transform 0.35s;
+    -o-transition: transform 0.35s;
+    -webkit-transition: transform 0.35s;
+    transition: transform 0.35s;
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--hvid);
+
+}
+
+
+nav .m-menu__overlay {
+    background-color: var(--sort);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+
+}
+
+nav .m-menu__header {
+    padding: 0 16px;
+    height: 50px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: space-around;
+    -webkit-align-items: center;
+    align-items: center;
+    border-bottom: 1px solid var(--hvid);
+}
+
+nav .m-menu__header span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+
+}
+
+nav .m-menu .m-menu {
+    -moz-transform: translate3d(480px, 0, 0);
+    -o-transform: translate3d(480px, 0, 0);
+    -ms-transform: translate3d(480px, 0, 0);
+    -webkit-transform: translate3d(480px, 0, 0);
+    transform: translate3d(480px, 0, 0);
+
+}
+
+nav .m-menu ul {
+    height: 100%;
+    overflow-y: auto;
+
+}
+
+nav .m-menu ul li a,
+nav .m-menu ul li label {
+    display: block;
+    text-align: left;
+    padding: 0 15px;
+    line-height: 47px;
+    text-decoration: none;
+    color: var(--sort);
+    cursor: pointer;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--hvid);
+    position: relative;
+}
+
+#a_menu {
+    padding-left: 0px
+}
+
+
+
+
+nav .m-menu ul li label.a-label__chevron::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-color: var(--hvid);
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 50%;
+    margin-top: -5px;
+    right: 16px;
+
+}
+
+nav .m-menu ul li .-invisible {
+    border-bottom: 0;
+}
+
+nav .m-menu .m-menu label.m-menu__toggle {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    border-bottom: 0;
+    padding: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
+}
+
+nav .m-menu__checkbox:checked~.m-menu__overlay {
+    display: block;
+}
+
+nav .m-menu__checkbox:checked~.m-menu {
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+svg {
+    stroke: var(--blaa);
+
+}
+
+
+
+
+/*---DROPDOWN MENU (skal skjules på mobil)--*/
+.menu_items {
+    display: none;
+}
+
+.menu_bar {
+    height: 0px;
+}
+
+
+/*---HEADER EKSKLUSIV MENUER--*/
+
+.logo {
+    margin: 0;
+    padding-top: 0%;
+    height: 100%;
+    display: block;
+    margin-left: 35px;
+    margin-right: auto;
+}
+
+
+
+/*---FORSIDEBILLEDE MED TEKST---*/
+.forside_img {
+    display: block;
+    width: 100%;
+    min-height: 7rem;
+}
+
+.forside_txt {
+    position: relative;
+    width: 100%;
+    bottom: 12rem;
+    color: var(--hvid);
+    text-align: center;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.eaaa_txt {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0%;
+
+}
+
+/*------- BUTTON: https://getcssscan.com/css-buttons-examples også brugt i kategori.css samt produkt.css -------*/
+.button-21 {
+    align-items: center;
+    appearance: none;
+    background-color: var(--hvid);
+    background-size: calc(100% + 20px) calc(100% + 20px);
+    border-radius: 480px;
+    border: none;
+    box-sizing: border-box;
+    color: var(--sort);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 0.7rem;
+    height: 2rem;
+    justify-content: center;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    padding: 10px 25px;
+    /* padding i selve knappen */
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+    font-family: 'Neucha', cursive;
+}
+
+.button-21:hover {
+    background-color: var(--beige);
+    color: var(--sort);
+    border: none;
+}
+
+/*--CONTENT----*/
+
+.forside_section {
+    background-color: var(--blaa);
+    padding-top: 1%;
+    border-radius: 6% 6% 0% 0%;
+
+
+}
+
+#forside_top_section {
+    margin-top: -9.7rem;
+    margin-bottom: 2.5%;
+}
+
+.forside_section_header {
+    padding-left: 2.5%;
+    padding-bottom: 2.5%;
+    margin-block-end: 0px;
+    margin-bottom: 0.1px;
+}
+
+
+
+
+
+.m_step_section {
+    display: flex;
+    margin-left: 0px;
+    padding-bottom: 2.5%;
+}
+
+.mv_row {
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+}
+
+.mv_link {
+    text-decoration: none;
+    color: var(--sort);
+}
+
+
+.mv_navn {
+    font-family: 'Neucha', cursive;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.f_contentimg {
+    width: 60%;
+    display: block;
+    justify-content: center;
+    margin-left: 26%;
+
+}
+
+
+
+
+
+
+/*--FOOTER----*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 25px;
+    background-color: var(--sort);
+}
+
+.footer_card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.footer_card_header {
+    color: var(--hvid);
+    padding: 10px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.footer_ikons {
+    color: var(--hvid);
+}
+
+.some_img {
+    width: 10%;
+}
+
+/* alle ikoner skal være hvi (virker ikke med class, så de har hver deres id) */
+#ikon_search,
+#ikon_shoppingbag,
+#ikon_locationon_footer,
+#ikon_locationon_top,
+#ikon_locationon_content,
+#ikon_mail,
+#ikon_call {
+    color: var(--hvid);
+    padding-left: 15px;
+}
+
+
+.footer_link {
+    color: var(--hvid);
+    text-decoration: none;
+    padding: 5px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: 'Neucha', cursive;
+}
+
+.footer_link:hover {
+    color: var(--beige);
+}
+
+
+/*=============================================================================================
+=========================================   TABLET   ==========================================
+=============================================================================================*/
+
+@media screen and (min-width: 900px) {
+
+    .forside_section {
+        margin-bottom: 5%;
+        width: 100%;
+    }
+
+    .bestil_m_img {
+        width: 40%;
+    }
+
+    .mv_navn {
+        font-size: larger;
+    }
+
+
+
+    .button-21 {
+        align-items: center;
+        appearance: none;
+        background-color: var(--hvid);
+        background-size: calc(100% + 20px) calc(100% + 20px);
+        border-radius: 200px;
+        border: none;
+        box-sizing: border-box;
+        color: var(--sort);
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 1.3rem;
+        height: 4rem;
+        justify-content: center;
+        line-height: 1.5;
+        margin-top: 15px;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
+        padding: 10px 25px;
+        /* padding i selve knappen */
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        touch-action: manipulation;
+        vertical-align: top;
+        white-space: nowrap;
+        font-family: 'Neucha', cursive;
+    }
+
+    .button-21:hover {
+        background-color: var(--beige);
+        color: var(--sort);
+        border: none;
+    }
+
+
+
+    /*-----------------------------------------------------------
+FOOTER
+------------------------------------------------------------*/
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+
+    }
+
+
+    .footer_card {
+        width: 16rem;
+    }
+}
+
+/*=============================================================================================
+========================================   COMPUTER   =========================================
+=============================================================================================*/
+
+@media screen and (min-width: 1200px) {
+
+    /*-- HEADER---*/
+
+    .header_card {
+        display: none;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .nav_ikoner {
+        padding-left: 85%;
+
+    }
+
+
+
+    /*---DROPDOWN MENUBAR--*/
+    .menu_bar {
+        padding-left: 20%;
+        padding-top: 0x;
+        position: fixed;
+        font-family: 'Neucha', cursive;
+
+    }
+
+    .menu_items {
+        display: flex;
+        justify-content: space-around;
+        margin: 0px;
+
+    }
+
+    .menu_item {
+        text-decoration: none;
+        color: var(--hvid);
+        padding-right: 1.8rem;
+
+    }
+
+    .menu_item:hover {
+        color: var(--beige);
+    }
+
+
+    /* DROP DOWN */
+
+    .dropbutton {
+        background-color: var(--gron);
+        color: var(--hvid);
+        padding: 8px;
+        font-size: 1.15rem;
+        border: none;
+    }
+
+    .dropbutton:hover {
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+
+    }
+
+    .drop_punkter {
+        display: none;
+        position: absolute;
+        background-color: none;
+        min-width: 20%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .drop_punkter a {
+        color: var(--beige);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .drop_punkter a:hover {
+        /*hover på dropdown punkterne*/
+        background-color: var(--gul);
+        color: var(--blaa);
+    }
+
+    .dropdown:hover .drop_punkter {
+        display: block;
+        /*punkterne skal stå under hinanden*/
+    }
+
+    .dropdown:hover .dropbutton {
+        /*hover på menupunktet*/
+        color: var(--gul);
+        background-color: none;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .dropdown_ekstra_bue:hover .dropbutton {
+        border-bottom-right-radius: 10px;
+    }
+
+    .active_dropdown {
+        background-color: var(--gron);
+        color: var(--gron);
+        border-radius: 10px;
+    }
+
+    .m-menu__toggle {
+        /* burgermenu skal ikke vises på pc */
+        display: none;
+
+    }
+
+
+    /*--FORSIDE COVERBILLEDE---*/
+
+    .forside_img {
+        display: block;
+        width: 100%;
+        height: 43rem;
+    }
+
+    .forside_txt {
+        bottom: 42rem;
+        font-size: 4rem;
+        color: var(--hvid);
+    }
+
+
+
+
+
+
+}
