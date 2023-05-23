@@ -18,10 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- ikoner  -->
     <script src="https://kit.fontawesome.com/66a5a04b45.js" crossorigin="anonymous"></script>
+    <script src="js/javascript.js"></script>
 </head>
-
-
-<!---- BODY-->
 
 <body>
 
@@ -42,13 +40,8 @@
             </label>
             <label class="m-menu__overlay" for="menu"></label>
 
-            <!----------------------------------google ikoner i navbar--------------------------->
+            <!---------------------------------- navbar logo  --------------------------->
             <a href="index.html" class="logo"><img src="img/logo.jpg" alt="logo til forsiden" class="logo"></a>
-
-            <div class="nav_ikoner">
-                <i class="material-icons" id="ikon_search">search</i>
-                <i class="material-icons" id="ikon_shoppingbag">shopping_bag</i>
-            </div>
 
             <!------------------------------Kryds i menu----------------------------->
             <div class="m-menu">
@@ -62,8 +55,6 @@
                     </label>
                     <span></span>
                 </div>
-                <!-----------------------------Tilbage pil-------------------------------->
-
 
                 <!------------------------------SEKTION 1----------------------------------->
                 <ul>
@@ -223,9 +214,6 @@
                     </div>
                 </li>
 
-
-
-
             </div>
             <!---DROPDOWN MENU (https://www.w3schools.com/howto/howto_css_dropdown.asp)-->
 
@@ -244,7 +232,7 @@
                     </div>
 
                     <div class="dropdown">
-                        <form action="#" class="menu_item"><button class="dropbutton">MAD</button></form>
+                        <form action="kategori.html" class="menu_item"><button class="dropbutton">MAD</button></form>
                         <div class="drop_punkter">
                             <a href="#">Dagens ret</a>
                             <a href="#">Bruger</a>
@@ -295,75 +283,68 @@
                             <a href="#">Viemosevej 50</a>
                         </div>
                     </div>
-                </div>
+                    
+
+                    <!-- Kurv -->
+                    <div>
+                        <button onclick="showCart()"><i class="fas fa-shopping-cart"></i></button>
+                        <div id="cartItems" style="display: none;"></div>
+
+                    </div>
+
             </nav>
         </nav>
-
-
-
-
-
     </header>
-
-
-
-
-
-
-    <!--FORSIDEBILLEDE-->
-    <div class="forside_cover">
-        <img src="img/forsideBaggrund.png" alt="forside billede" class="forside_img">
-        <div class="forside_txt">
-            <h1 class="forside_overskrift">EAAA'T</h1>
-            <h6 class="eaaa_txt">Erhvervsakademiet Aarhus </h6>
-            <form action="#"> <button
-                    class="button-21 button-211 " role="button">Bestil din frokost </button> </form>
-        </div>
+<!--FORSIDEBILLEDE-->
+<div class="forside_cover">
+    <img src="img/forsideBaggrund.png" alt="forside billede" class="forside_img">
+    <div class="forside_txt">
+        <h1 class="forside_overskrift">EAAA'T</h1>
+        <h6 class="eaaa_txt">Erhvervsakademiet Aarhus </h6>
+        <form action="#"> <button
+                class="button-21 button-211 " role="button">Bestil din frokost </button> </form>
     </div>
+</div>
 
-    <!--CONTEN--->
+<!--CONTEN--->
 
-    <section class="forside_section" id="forside_top_section">
-        <h2 class="forside_section_header" id="forside_section_top_header"> Bestil - step by step </h2>
-        <section class="m_step_section">
-            <div class="mv_row">
-                <a href="produkt.html" class="mv_link">
-                    <img src="img/buyfood.png" alt="tallerken" class="f_contentimg bestil_m_img">
-                    <p class="mv_navn"> Vælg din frokost på eaaat.dk</h3>
-                </a>
-                
-            </div>
+<section class="forside_section" id="forside_top_section">
+    <h2 class="forside_section_header" id="forside_section_top_header"> Bestil - step by step </h2>
+    <section class="m_step_section">
+        <div class="mv_row">
+            <a href="produkt.html" class="mv_link">
+                <img src="img/buyfood.png" alt="tallerken" class="f_contentimg bestil_m_img">
+                <p class="mv_navn"> Vælg din frokost på eaaat.dk</h3>
+            </a>
+            
+        </div>
 
-            <div class="mv_row">
-                <a href="produkt.html" class="mv_link">
-                    <img src="img/mobilepay_logo.png" alt="mobilepay" class="f_contentimg bestil_m_img">
-                    <p class="mv_navn"> Betal med Mobilepay eller kort</h3>
-                </a>
-               
-            </div>
+        <div class="mv_row">
+            <a href="produkt.html" class="mv_link">
+                <img src="img/mobilepay_logo.png" alt="mobilepay" class="f_contentimg bestil_m_img">
+                <p class="mv_navn"> Betal med Mobilepay eller kort</h3>
+            </a>
+           
+        </div>
 
-            <div class="mv_row">
-                <a href="produkt.html" class="mv_link">
-                    <img src="img/takeaway.png" alt="takeaway" class="f_contentimg bestil_m_img">
-                    <p class="mv_navn"> Afhent i din nærmest kantine</h3>
-              
-                </a>
-               
-            </div>
-            <div class="mv_row">
-                <a href="produkt.html" class="mv_link">
-                    <img src="img/enjoy.png" alt="nyd din" class="f_contentimg bestil_m_img">
-                    <p class="mv_navn"> Nyd din frokost i kantinen</h3>
-                        
-                </a>
-               
-            </div>
-        </section>
+        <div class="mv_row">
+            <a href="produkt.html" class="mv_link">
+                <img src="img/takeaway.png" alt="takeaway" class="f_contentimg bestil_m_img">
+                <p class="mv_navn"> Afhent i din nærmest kantine</h3>
+          
+            </a>
+           
+        </div>
+        <div class="mv_row">
+            <a href="produkt.html" class="mv_link">
+                <img src="img/enjoy.png" alt="nyd din" class="f_contentimg bestil_m_img">
+                <p class="mv_navn"> Nyd din frokost i kantinen</h3>
+                    
+            </a>
+           
+        </div>
     </section>
-
-
-    
-
+</section>
 
     <!--FOOTER--->
     <footer>
@@ -395,13 +376,9 @@
                 <i class="fa-brands fa-instagram"></i>
             </div>
 
-            <a href="https://www.facebook.com/gladforvin.dk" class="footer_link"><img src="img/facebook.png"
-                    alt="Facebook logo" class="some_img"></a>
+           
+            
         </div>
     </footer>
-
-
-
 </body>
-
 </html>

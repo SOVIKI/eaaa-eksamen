@@ -215,24 +215,26 @@ nav .m-menu__checkbox:checked~.m-menu {
 
 svg {
     stroke: var(--blaa);
-
 }
 
 
+/*  KURV */ 
 
 
-/*---DROPDOWN MENU (skal skjules på mobil)--*/
-.menu_items {
+/* Kurv */
+#cartItems {
+    background-color: lightgray;
+    padding: 10px;
+    margin-top: 10px;
     display: none;
 }
 
-.menu_bar {
-    height: 0px;
+#cartItems.show {
+    display: block;
 }
 
 
-/*---HEADER EKSKLUSIV MENUER--*/
-
+/* ---- NAV + LOGO --*/ 
 .logo {
     margin: 0;
     padding-top: 0%;
@@ -242,8 +244,14 @@ svg {
     margin-right: auto;
 }
 
+/*---DROPDOWN MENU (skal skjules på mobil)--*/
+.menu_items {
+    display: none;
+}
 
-
+.menu_bar {
+    height: 0px;
+}
 /*---FORSIDEBILLEDE MED TEKST---*/
 .forside_img {
     display: block;
@@ -362,12 +370,6 @@ svg {
     margin-left: 26%;
 
 }
-
-
-
-
-
-
 /*--FOOTER----*/
 
 footer {
@@ -397,23 +399,6 @@ footer {
     color: var(--hvid);
 }
 
-.some_img {
-    width: 10%;
-}
-
-/* alle ikoner skal være hvi (virker ikke med class, så de har hver deres id) */
-#ikon_search,
-#ikon_shoppingbag,
-#ikon_locationon_footer,
-#ikon_locationon_top,
-#ikon_locationon_content,
-#ikon_mail,
-#ikon_call {
-    color: var(--hvid);
-    padding-left: 15px;
-}
-
-
 .footer_link {
     color: var(--hvid);
     text-decoration: none;
@@ -431,9 +416,20 @@ footer {
 /*=============================================================================================
 =========================================   TABLET   ==========================================
 =============================================================================================*/
-
 @media screen and (min-width: 900px) {
 
+    
+
+    /* CSS-styling for kurven */
+    #cartItems {
+        position: absolute;
+        background-color: var(--blaa);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        display: none;
+        padding: 80px;
+    }
     .forside_section {
         margin-bottom: 5%;
         width: 100%;
@@ -484,17 +480,14 @@ footer {
         border: none;
     }
 
-
-
-    /*-----------------------------------------------------------
-FOOTER
-------------------------------------------------------------*/
+    /*---- FOOTER-----*/
     footer {
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-start;
 
     }
+
 
 
     .footer_card {
@@ -522,6 +515,10 @@ FOOTER
         padding-left: 85%;
 
     }
+
+
+    
+
 
 
 
@@ -624,9 +621,7 @@ FOOTER
 
     }
 
-
-    /*--FORSIDE COVERBILLEDE---*/
-
+    
     .forside_img {
         display: block;
         width: 100%;
@@ -638,10 +633,5 @@ FOOTER
         font-size: 4rem;
         color: var(--hvid);
     }
-
-
-
-
-
 
 }

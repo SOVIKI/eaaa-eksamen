@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/kategori.css">
-    <title>Forside | eaaa.shop </title>
+    <link rel="stylesheet" href="css/betaling.css">
+    <title> Afhentning | eaaa.shop </title>
 
     <!-- Tab ikon -->
     <link rel="icon" type="image/x-icon" href="img/logotab.png" class="tab_ikon">
@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- ikoner  -->
     <script src="https://kit.fontawesome.com/66a5a04b45.js" crossorigin="anonymous"></script>
-    <script src="js/javascript.js" defer></script>
+    <script src="js/javascript.js"></script>
 </head>
 
 <body>
@@ -41,7 +41,7 @@
             </label>
             <label class="m-menu__overlay" for="menu"></label>
 
-            <!---------------------------------- navbar logo + søge + kurv --------------------------->
+            <!---------------------------------- navbar logo  --------------------------->
             <a href="index.html" class="logo"><img src="img/logo.jpg" alt="logo til forsiden" class="logo"></a>
 
             <!------------------------------Kryds i menu----------------------------->
@@ -287,25 +287,9 @@
 
 
                     <!-- Kurv -->
-
-
-                    <div class="container">
-                        <div class="shopping ">
-                            <img src="img/bag.png" alt="kurv">
-                            <h2 id="count" class="shopping__counter"></h2>
-                        </div>
-
-                        <div class="list"> </div>
-                        <div class="card">
-                          
-                            <h1>Kurv</h1>
-                            <ul class="listCard"></ul>
-                            <div class="checkOut">
-                                <div class="total">0</div>
-                                <div class="closeShopping">close</div>
-                            </div>
-
-                        </div>
+                    <div>
+                        <button onclick="showCart()"><i class="fas fa-shopping-cart"></i></button>
+                        <div id="cartItems" style="display: none;"></div>
 
                     </div>
 
@@ -313,114 +297,115 @@
         </nav>
     </header>
 
+    <main>
+        <h1 class="headline"> Vælg Afhentning</h1>
 
-    <!-- SCROLL NAV BAR -->
-    <div id="navbar">
-        <a href="#dagens_ret">Dagens ret</a>
-        <a href="#tilbud">Tilbud</a>
-        <a href="#sandwich">Sandwich</a>
-        <a href="#pasta">Pasta</a>
-        <a href="#wraps">Wraps</a>
-        <a href="#salat">Salat</a>
-        <a href="#pita">Pita</a>
-        <a href="#pizza">Pizza</a>
-    </div>
+        <!-- Afhentings billeder -->
+        <div class="afhentning_gallery">
+            <div class="item">
+                <img src="img/soenderhoeh30.jpg" alt="Soenderhoej 30">
+                <h2>Sønderhøj 30</h2>
+            </div>
+            <div class="item">
+                <img src="img/soenderhoej1..jpg" alt="Soenderhoej 28">
+                <h2>Sønderhøj 28</h2>
+            </div>
 
+            <div class="item">
+                <img src="img/ringvejsyd.jpg" alt="Ringvej Syd 104">
+                <h2>Ringvej Syd 104</h2>
+            </div>
 
+            <div class="item">
+                <img src="img/skole.jpg" alt="Skole">
+                <h2>Skole</h2>
+            </div>
+            <div class="item">
+                <img src="img/Soenderhoej.jpg" alt="Soenderhoej 1">
+                <h2>Sønderhøj 1</h2>
+            </div>
+            <div class="item">
+                <img src="img/skole2.jpg" alt="Skole">
+                <h2>Skole</h2>
+            </div>
 
-
-    <section class="mad_oversigt">
-       
-        <div class="mad_div"> 
-            <img src="img/polsehorn.png" alt="poelsehorn" class="madtilbud_img">
-             <h2 class="mad_txt"> Pølsehorn</h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
-        </div>
-
-
-
-        <div class="mad_div">
-            <img src="img/burger.png" alt="burger" class="madtilbud_img">
-            <h2 class="mad_txt"> Pulled pork burger </h2>
-            <button class="addtocart" id="add-polsehorn" onclick="addItem (`Pulled Pork Burger`)">+</button>
-
-
-        </div>
-
-        <div class="mad_div">
-
-            <img src="img/cookie.png" alt="cookie" class="madtilbud_img">
-            <h2 class="mad_txt"> Scones & Cookie </h2> 
-            <button class="addtocart" id="add-polsehorn" onclick="addItem (`Scones Cookie`)">+</button>
-
+            <!-- Pop-knap -->
 
         </div>
+        <button class="betal_knap" onclick="openForm()"> Betal nu</button>
+        <!-- The form -->
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
 
-        <h1> Sandwich </h1>
 
-        <div class="mad_div"> 
-            <img src="img/sandwich.jpg" alt="Sandwich" class="madtilbud_img">
-             <h2 class="mad_txt"> Sandwich Skinke + </h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
+                <button type="button" class="cancel" onclick="closeForm()">X</button>
+                <div class="row">
+                    <div class="col-75">
+                        <div class="container">
+                            <form action="/action_page.php">
+
+                                <div class="row">
+                                    <div class="col-25">
+                                        <h2>Billing Address</h2>
+                                        <label for="fname"><i class="fa fa-user"></i> Fulde navn</label>
+                                        <input type="text" id="fname" name="firstname" placeholder="">
+                                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                        <input type="text" id="email" name="email" placeholder="">
+                                        <label for="phone_nummer"><i class="fa fa-mobile"></i> Telefon nummer </label>
+                                        <input type="text" id="phone_nummer" name="phone_nummer" placeholder="">
+
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="col-50">
+                                <h2>Betaling</h2>
+                                <div class="icon-container">
+                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                    <i class="fa fa-cc-mobile" style="color:blue;"></i>
+
+                                </div>
+                                <!-- 
+                                <label for="cname">Name on Card</label>
+                                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                <label for="ccnum">Credit card number</label>
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                <label for="expmonth">Exp Month</label>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="expyear">Exp Year</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                                    </div>
+                                </div>
+                                -->
+                            </div>
+
+                            <!-- KURV OVERSIGT -->
+                            <div class="col-75">
+                                <div class="container">
+                                    <i class="fa fa-shopping-cart"></i> <h2>Kurv <span class="price"<b>4</b></span>
+                                    </h2>
+                                    <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                                    <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                                    <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+                                    <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                                    <hr>
+                                    <p>Total <span class="price"><b>$30</b></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </form>
         </div>
-        <div class="mad_div"> 
-            <img src="img/sandwich.jpg" alt="Sandwich" class="madtilbud_img">
-             <h2 class="mad_txt"> Sandwich Skinke + </h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
-        </div>
 
-        <div class="mad_div"> 
-            <img src="img/sandwich.jpg" alt="Sandwich" class="madtilbud_img">
-             <h2 class="mad_txt"> Sandwich Skinke + </h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
-        </div>
+    </main>
 
-
-        <div class="mad_div"> 
-            <img src="img/sandwich.jpg" alt="Sandwich" class="madtilbud_img">
-             <h2 class="mad_txt"> Sandwich Skinke + </h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
-        </div>
-        <div class="mad_div"> 
-            <img src="img/sandwich.jpg" alt="Sandwich" class="madtilbud_img">
-             <h2 class="mad_txt"> Sandwich Skinke + </h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
-        </div>
-
-        <div class="mad_div"> 
-            <img src="img/sandwich.jpg" alt="Sandwich" class="madtilbud_img">
-             <h2 class="mad_txt"> Sandwich Skinke + </h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
-        </div>
-
-        <div class="mad_div"> 
-            <img src="img/sandwich.jpg" alt="Sandwich" class="madtilbud_img">
-             <h2 class="mad_txt"> Sandwich Skinke + </h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
-        </div>
-        <div class="mad_div"> 
-            <img src="img/sandwich.jpg" alt="Sandwich" class="madtilbud_img">
-             <h2 class="mad_txt"> Sandwich Skinke + </h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
-        </div>
-
-        <div class="mad_div"> 
-            <img src="img/sandwich.jpg" alt="Sandwich" class="madtilbud_img">
-             <h2 class="mad_txt"> Sandwich Skinke + </h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
-        </div>
-
-        <h1> Pasta </h1>
-        
-        <div class="mad_div"> 
-            <img src="img/sandwich.jpg" alt="Sandwich" class="madtilbud_img">
-             <h2 class="mad_txt"> Sandwich Skinke + </h2>
-              <button class="addtocart" id="add-polsehorn" onclick="addItem(`pølsehorn`)">+</button>
-        </div>
-
-
-
-    </section>
 
 
     <!--FOOTER--->
@@ -452,8 +437,6 @@
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-instagram"></i>
             </div>
-
-
         </div>
     </footer>
 </body>
