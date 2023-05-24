@@ -114,8 +114,8 @@
 
 
 .madtilbud_img {
-    width: 90%;
-    display: block;
+    width:390%;
+   
     border-radius: 20px;
 
 }
@@ -247,7 +247,8 @@
 
 
 .madtilbud_img {
-    width: 60%;
+    width: 90%;
+    padding: 10px;
     border-radius: 20px;
 
 }
